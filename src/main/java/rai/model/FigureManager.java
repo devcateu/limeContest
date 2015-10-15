@@ -5,9 +5,13 @@ package rai.model;
  */
 public class FigureManager {
 
-    private final static Figure emptyFigure = new Figure(0, 0, 0, 0, 0, 0, null, null);
+  private final static Figure emptyFigure = new Figure(0, 0, 0, 0, 0, 0, null, null);
 
-    public static Figure getEmptyFigure() {
-        return emptyFigure;
-    }
+  public static Figure getEmptyFigure() {
+    return emptyFigure;
+  }
+
+  public static Figure buildTriangle(double xUpLeft, double xDown, double xUpRight, double yDown, double yUp) {
+    return new Figure(xUpLeft, xDown, xUpRight, xDown, yUp, yDown, emptyFigure, emptyFigure);
+  }
 }
